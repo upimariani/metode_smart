@@ -27638,7 +27638,7 @@ text.highcharts-drilldown-data-label {
     min-width: 100%;
     min-height: 100vh;
     background: #1abc9c;
-    background-image: url("../images/auth/img-auth-big.jpg");
+    background-image: url("asset/flat-able-lite/dist/images/auth/img-auth-big.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -27829,7 +27829,7 @@ text.highcharts-drilldown-data-label {
 
 /* image varient start */
 .aut-bg-img {
-    background-image: url("../images/auth/img-auth-big.jpg");
+    background-image: url("http://localhost/metode_smart/asset/flat-able-lite/dist/images/auth/img-auth-big.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
