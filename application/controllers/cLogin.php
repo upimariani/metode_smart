@@ -39,7 +39,7 @@ class cLogin extends CI_Controller
 				} else if ($level_user == '2') {
 					redirect('WaliKelas/cDasboardWaliKelas', 'refresh');
 				} else {
-					redirect('KepalaSekolah/cDashboardKepalaSekolah', 'refresh');
+					redirect('KepalaSekolah/cDashboardKepsek ', 'refresh');
 				}
 			} else {
 				$this->session->set_flashdata('error', 'Username dan Password Anda Salah!!');
@@ -52,7 +52,7 @@ class cLogin extends CI_Controller
 
 		$this->session->unset_userdata('id');
 
-		$this->session->set_flashdata('success', 'Anda Berhasil LogOut!!!');
+		$this->session->set_flashdata('success', 'Anda Berhasil Log Out!!!');
 		redirect('cLogin', 'refresh');
 	}
 }

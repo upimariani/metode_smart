@@ -14,7 +14,6 @@
 					<div class="main-menu-header">
 						<img class="img-radius" src="<?= base_url('asset/img-sklh.png') ?>" alt="User-Profile-Image">
 						<div class="user-details">
-							<span>John Doe</span>
 							<div id="more-details">Admin<i class="fa fa-chevron-down m-l-5"></i></div>
 						</div>
 					</div>

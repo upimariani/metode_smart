@@ -22,8 +22,10 @@
 		<div class="row">
 			<?php
 			$siswa = $this->db->query("SELECT COUNT(id_siswa) as jml FROM `analisis_siswa`")->row();
-			$analisis = $this->db->query("SELECT COUNT(id_siswa) as jml FROM `analisis_siswa` WHERE hasil != 'NULL'")->row();
+			$analisis = $this->db->query("SELECT COUNT(id_siswa) as jml FROM `analisis_siswa` WHERE hasil != '0'")->row();
 			$user = $this->db->query("SELECT COUNT(id_user) as jml FROM `user`")->row();
+			$hasil_analisis = $this->db->query("SELECT MAX(hasil) as hasil, nama_siswa, jk, kelas, angkatan FROM analisis_siswa WHERE hasil!=0 GROUP BY kelas, angkatan")->result();
+
 			?>
 			<!-- table card-1 start -->
 			<div class="col-md-12 col-xl-4">
@@ -90,6 +92,49 @@
 					</div>
 				</div>
 				<!-- widget primary card end -->
+			</div>
+			<div class="col-xl-8">
+				<div class="card">
+					<div class="card-header">
+						<h3>Informasi Siswa Terbaik Per Kelas dan Angkatan</h3>
+					</div>
+					<div class="card-body table-border-style">
+						<div class="table-responsive">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Nama Siswa</th>
+										<th>Kelas</th>
+										<th>Angkatan</th>
+										<th>Jenis Kelamin</th>
+										<th>Hasil</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php
+									$no = 1;
+									foreach ($hasil_analisis as $key => $value) {
+									?>
+										<tr>
+											<td><?= $no++ ?></td>
+											<td><?= $value->nama_siswa ?></td>
+											<td><?= $value->kelas ?></td>
+											<td><?= $value->angkatan ?></td>
+											<td><?= $value->jk ?></td>
+											<td><?= $value->hasil ?>
+											</td>
+
+										</tr>
+									<?php
+									}
+									?>
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
 			</div>
 			<!-- table card-1 end -->
 			<!-- table card-2 start -->

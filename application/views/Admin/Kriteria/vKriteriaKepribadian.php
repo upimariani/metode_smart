@@ -109,3 +109,43 @@
 		<!-- [ Main Content ] end -->
 	</div>
 </section>
+<?php
+foreach ($kepribadian as $key => $value) {
+?>
+	<div id="edituser<?= $value->id_kepribadian ?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLiveLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLiveLabel">Perbaharui Data Kriteria <?= $value->range_kepribadian ?></h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="card-body">
+					<form action="<?= base_url('Admin/cKriteria/updatekepribadian/' . $value->id_kepribadian) ?>" method="POST">
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label class="floating-label" for="Email">Range Awal</label>
+									<input type="text" name="range" value="<?= $value->range_kepribadian ?>" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Masukkan Range Awal Kriteria Kepribadian">
+									<?= form_error('range', '<small class="text-danger">', '</small>') ?>
+								</div>
+							</div>
+							<div class=" col-sm-6">
+								<div class="form-group">
+									<label class="floating-label" for="Text">Nilai</label>
+									<input type="text" name="nilai" value="<?= $value->nilai_kepribadian ?>" class="form-control" id="Text" placeholder="Masukkan Nilai">
+									<?= form_error('nilai', '<small class="text-danger">', '</small>') ?>
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn  btn-secondary" data-dismiss="modal">Close</button>
+					<button type="submit" class="btn  btn-primary">Save changes</button>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+<?php
+}
+?>

@@ -111,9 +111,9 @@
 						<label for="exampleInputEmail1">Kelas</label>
 						<select name="kelas" class="form-control" id="exampleFormControlSelect1" required>
 							<option value="">---Pilih Kelas---</option>
-							<option value="VII">VII</option>
-							<option value="VIII">VIII</option>
-							<option value="IX">IX</option>
+							<option value="X">X</option>
+							<option value="XI">XI</option>
+							<option value="XII">XII</option>
 						</select>
 						<small id="emailHelp" class="form-text text-muted">Masukkan Kelas</small>
 					</div>
@@ -167,15 +167,15 @@ foreach ($siswa as $key => $value) {
 							<label for="exampleInputEmail1">Kelas</label>
 							<select name="kelas" class="form-control" id="exampleFormControlSelect1" required>
 								<option value="">---Pilih Kelas---</option>
-								<option value="VII" <?php if ($value->kelas == 'VII') {
+								<option value="X" <?php if ($value->kelas == 'X') {
 														echo 'selected';
-													} ?>>VII</option>
-								<option value="VIII" <?php if ($value->kelas == 'VIII') {
-															echo 'selected';
-														} ?>>VIII</option>
-								<option value="IX" <?php if ($value->kelas == 'IX') {
+													} ?>>X</option>
+								<option value="XI" <?php if ($value->kelas == 'XI') {
 														echo 'selected';
-													} ?>>IX</option>
+													} ?>>XI</option>
+								<option value="XII" <?php if ($value->kelas == 'XII') {
+														echo 'selected';
+													} ?>>XII</option>
 							</select>
 							<small id="emailHelp" class="form-text text-muted">Masukkan Kelas</small>
 						</div>

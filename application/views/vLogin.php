@@ -34,7 +34,7 @@
 			<div class="row align-items-center ">
 				<div class="col-md-12">
 					<div class="card-body">
-						<h4 class="mb-3 f-w-400">Signin User</h4>
+						<h4 class="mb-3 f-w-400">Sign in User</h4>
 						<h4 class="mb-3 f-w-400">MAN 2 KUNINGAN</h4>
 						<?php
 						if ($this->session->userdata('error')) {
