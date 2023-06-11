@@ -1,10 +1,6 @@
 <body class="">
 	<!-- [ Pre-loader ] start -->
-	<div class="loader-bg">
-		<div class="loader-track">
-			<div class="loader-fill"></div>
-		</div>
-	</div>
+
 	<!-- [ Pre-loader ] End -->
 	<!-- [ navigation menu ] start -->
 	<nav class="pcoded-navbar  ">
@@ -14,14 +10,10 @@
 					<div class="main-menu-header">
 						<img class="img-radius" src="<?= base_url('asset/img-sklh.png') ?>" alt="User-Profile-Image">
 						<div class="user-details">
-							<div id="more-details">Admin<i class="fa fa-chevron-down m-l-5"></i></div>
+							<div id="more-details">Admin</div>
 						</div>
 					</div>
-					<div class="collapse" id="nav-user-link">
-						<ul class="list-unstyled">
-							<li class="list-group-item"><a href="<?= base_url('cLogin/logout') ?>"><i class="feather icon-log-out m-r-5"></i>Logout</a></li>
-						</ul>
-					</div>
+
 				</div>
 
 				<ul class="nav pcoded-inner-navbar ">
@@ -36,7 +28,7 @@
 
 					</li>
 					<li class="nav-item">
-						<a href="<?= base_url('Admin/cUser') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-user"></i></span><span class="pcoded-mtext">User</span></a>
+						<a href="<?= base_url('Admin/cUser') ?>" class="nav-link"><span class="pcoded-micon"><i class="feather icon-user"></i></span><span class="pcoded-mtext">User</span></a>
 					</li>
 					<li class="nav-item pcoded-hasmenu">
 						<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Kriteria Analisis</span></a>
@@ -47,6 +39,9 @@
 							<li><a href="<?= base_url('Admin/cKriteria/kepribadian') ?>">Kriteria Kepribadian</a></li>
 							<li><a href="<?= base_url('Admin/cKriteria/raport') ?>">Kriteria Raport</a></li>
 						</ul>
+					</li>
+					<li class="nav-item">
+						<a href="<?= base_url('cLogin/logout') ?>" class="nav-link"><span class="pcoded-micon"><i class="feather icon-log-out"></i></span><span class="pcoded-mtext">Logout</span></a>
 					</li>
 				</ul>
 

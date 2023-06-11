@@ -1,10 +1,6 @@
 <body class="">
 	<!-- [ Pre-loader ] start -->
-	<div class="loader-bg">
-		<div class="loader-track">
-			<div class="loader-fill"></div>
-		</div>
-	</div>
+
 	<!-- [ Pre-loader ] End -->
 	<!-- [ navigation menu ] start -->
 	<nav class="pcoded-navbar  ">
@@ -14,13 +10,8 @@
 					<div class="main-menu-header">
 						<img class="img-radius" src="<?= base_url('asset/img-sklh.png') ?>" alt="User-Profile-Image">
 						<div class="user-details">
-							<div id="more-details">Wali Kelas<i class="fa fa-chevron-down m-l-5"></i></div>
+							<div id="more-details">Wali Kelas</div>
 						</div>
-					</div>
-					<div class="collapse" id="nav-user-link">
-						<ul class="list-unstyled">
-							<li class="list-group-item"><a href="<?= base_url('cLogin/logout') ?>"><i class="feather icon-log-out m-r-5"></i>Logout</a></li>
-						</ul>
 					</div>
 				</div>
 
@@ -44,7 +35,9 @@
 					<li class="nav-item">
 						<a href="<?= base_url('WaliKelas/cAnalisis') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Analisis Metode SMART</span></a>
 					</li>
-
+					<li class="nav-item">
+						<a href="<?= base_url('cLogin/logout') ?>" class="nav-link"><span class="pcoded-micon"><i class="feather icon-log-out"></i></span><span class="pcoded-mtext">Logout</span></a>
+					</li>
 				</ul>
 
 

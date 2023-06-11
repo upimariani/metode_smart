@@ -1,5 +1,5 @@
 <!-- Required Js -->
-<script src="<?= base_url('asset/flat-able-lite/dist/') ?>assets/js/vendor-all.min.js"></script>
+<!-- <script src="<?= base_url('asset/flat-able-lite/dist/') ?>assets/js/vendor-all.min.js"></script> -->
 <script src="<?= base_url('asset/flat-able-lite/dist/') ?>assets/js/plugins/bootstrap.min.js"></script>
 <script src="<?= base_url('asset/flat-able-lite/dist/') ?>assets/js/pcoded.min.js"></script>
 
