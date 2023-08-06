@@ -33,6 +33,9 @@ class cHasilAnalisis extends CI_Controller
 		$this->load->view('KepalaSekolah/vViewHasil', $data);
 		$this->load->view('KepalaSekolah/Layouts/footer');
 	}
+
+
+
 	public function download($kelas, $angkatan)
 	{
 		// memanggil library FPDF
@@ -42,10 +45,26 @@ class cHasilAnalisis extends CI_Controller
 		$pdf = new FPDF('P', 'mm', 'A4');
 		$pdf->AddPage();
 
+		$pdf->SetFont('Times', 'B', 14);
+		$pdf->Cell(40, 5, '', 0, 0, 'C');
+		$pdf->Image('asset/logo.png', 15, 5);
+		$pdf->Cell(150, 5, 'KEMENTRIAN AGAMA REPUBLIK INDONESIA', 0, 1, 'C');
+		$pdf->SetFont('Times', 'B', 12);
+		$pdf->Cell(40, 5, '', 0, 0, 'C');
+		$pdf->Cell(150, 5, 'KANTOR KEMENTRIAN AGAMA KABUPATEN KUNINGAN', 0, 1, 'C');
+		$pdf->SetFont('Times', 'B', 11);
+		$pdf->Cell(40, 5, '', 0, 0, 'C');
+		$pdf->Cell(150, 5, 'MADRASAH ALIYAH NEGERI (MAN) 2 KUNINGAN ', 0, 1, 'C');
+		$pdf->Cell(40, 5, '', 0, 0, 'C');
+		$pdf->Cell(150, 5, 'Jln. Siliwangi Km 15 Ciawigebang, Kuningan, 45591, Tlp/Fax : (0232) 878368', 0, 1, 'C');
+		$pdf->Cell(40, 5, '', 0, 0, 'C');
+		$pdf->Cell(150, 5, 'Website : www.manciwigebang.sch.id E-mail : man.ciawigebang@gmail.com', 0, 1, 'C');
 		$pdf->SetFont('Times', 'B', 13);
-		$pdf->Cell(200, 10, 'LAPORAN HASIL ANALISIS', 0, 0, 'C');
-
-		$pdf->Cell(10, 15, '', 0, 1);
+		$pdf->SetLineWidth(1);
+		$pdf->Line(10, 45, 200, 45);
+		$pdf->Cell(200, 40, 'LAPORAN HASIL ANALISIS', 0, 0, 'C');
+		$pdf->SetLineWidth(0);
+		$pdf->Cell(10, 30, '', 0, 1);
 		$pdf->SetFont('Times', 'B', 9);
 		$pdf->Cell(10, 7, 'NO', 1, 0, 'C');
 		$pdf->Cell(50, 7, 'NAMA', 1, 0, 'C');
